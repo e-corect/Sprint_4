@@ -4,6 +4,8 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
@@ -55,13 +57,13 @@ public class CreateOrderTests {
     public void setup() {
 
         //// Настройки для Chrome
-//        ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-//        driver = new ChromeDriver(options);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+        driver = new ChromeDriver(options);
         //// Настройки для FireFox
-        FirefoxOptions oprtions = new FirefoxOptions();
-        oprtions.setHeadless(true);
-        driver = new FirefoxDriver(oprtions);
+//        FirefoxOptions oprtions = new FirefoxOptions();
+//        oprtions.setHeadless(true);
+//        driver = new FirefoxDriver(oprtions);
     }
 
     @Parameterized.Parameters
